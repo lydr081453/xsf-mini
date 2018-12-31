@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/product/detail",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/friend/friend",
+    "pages/my/my",
+    "pages/product/list",
+    "pages/cart/cart"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f3fcf9",
+    "navigationBarTitleText": "小奢斐",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#959394",
+    "selectedColor": "#323223",
+    "backgroundColor": "#f0f0f0",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的"
+      }
+    ]
+  }
+}

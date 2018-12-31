@@ -1,0 +1,42 @@
+.mine{
+  background-color: #f3fcf9;
+  height: 200rpx;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction:row;
+  align-items: left;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 40rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  margin-top: 75rpx;
+  color: #aaa;
+}
+
+.order{
+  margin-top: 10rpx;
+}
+.row{
+  width:90%;
+  margin:20rpx;
+  flex-direction: row;
+  font-size:30rpx;
+  height: 70rpx;
+  border-bottom: 1px solid #f6f6f6;
+  padding-top:20rpx;
+}
+.row .left{
+  float: left;
+  padding-left: 5rpx;
+}
+.row .right{
+  float: right;
+}

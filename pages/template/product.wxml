@@ -1,0 +1,13 @@
+<template name="list">
+  <block wx:for="{{list}}" wx:key="{{index}}">
+    <navigator url='/pages/product/detail?pid={{item.id}}'>
+      <view class="item" style="float:{{(index%2==0)?'left':'right'}}">
+        <image class="img" src="http://xiaoshefei.test/uploads/{{item.picurl}}"></image>
+        <view class="text">
+            <text class="title">{{item.name}}</text>
+            <text class="description">￥{{item.amount}}</text>
+        </view>
+      </view>
+    </navigator>
+  </block>
+</template>

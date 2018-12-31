@@ -1,0 +1,17 @@
+<!--pages/product/list.wxml-->
+ <import src="/pages/template/product.wxml"/>
+ 
+<view class="container" style="padding:0rpx">
+    <!--垂直滚动，这里必须设置高度-->
+      <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}px;" 
+          class="list" bindscrolltolower="bindDownLoad" bindscrolltoupper="topLoad"  bindscroll="scroll">
+        <template is="list" data="{{list: list}}"/>
+     </scroll-view>
+     <view class="body-view">
+         <loading hidden="{{hidden}}" bindchange="loadingChange">
+             加载中...
+         </loading>
+     </view>
+ </view>
+
+

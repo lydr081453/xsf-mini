@@ -1,0 +1,36 @@
+<!--index.wxml-->
+ <import src="/pages/template/product.wxml"/>
+ <view>
+<swiper class='swiper-box' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style='height:{{Height}}'>
+      <block wx:for="{{ bannerUrls }}">
+          <swiper-item>
+              <view>
+              <navigator url="/pages/product/list" hover-class="navigator-hover">
+                  <image class="slide-image" src="http://xiaoshefei.test/uploads/{{ item.photourl }}"  bindload='imgHeight' mode='widthFix'></image></navigator>
+              </view>
+          </swiper-item>
+      </block>
+  </swiper>
+  <view class="Photo">
+  <navigator url="/pages/product/list?key={{photoNews[0].key}}" hover-class="navigator-hover">
+    <image src="http://xiaoshefei.test/uploads/{{photoNews[0].photourl}}" class="leftPhoto" ></image></navigator>
+    <navigator url="/pages/product/list?key={{photoNews[1].key}}" hover-class="navigator-hover">
+    <image src="http://xiaoshefei.test/uploads/{{photoNews[1].photourl}}" class="rightPhoto"></image></navigator>
+  </view>
+  <view style='border-top:1px solid #f6f6f6;'>
+    <text style='padding-left:10rpx;font-size:30rpx'>| 精品好货</text>
+  </view>
+<view class="container" style="padding:0rpx">
+    <!--垂直滚动，这里必须设置高度-->
+      <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}px;" 
+          class="list" bindscrolltolower="bindDownLoad" bindscrolltoupper="topLoad"  bindscroll="scroll">
+        <template is="list" data="{{list: list}}"/>
+     </scroll-view>
+     <view class="body-view">
+         <loading hidden="{{hidden}}" bindchange="loadingChange">
+             加载中...
+         </loading>
+     </view>
+     <view wx:if="{{is_list_bottom}}"><text>没有更多内容了</text></view>
+ </view>
+ </view>
